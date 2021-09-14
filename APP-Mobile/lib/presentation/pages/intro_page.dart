@@ -46,9 +46,9 @@ class _IntroPageState extends State<IntroPage> with TickerProviderStateMixin {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Padding(
-                            padding: const EdgeInsets.all(80),
+                            padding: const EdgeInsets.all(8),
                             child: Image.asset('assets/images/logo.png',
-                                width: 200)),
+                                width: 400)),
                         SizedBox(height: 50),
                         Center(
                             child: Row(

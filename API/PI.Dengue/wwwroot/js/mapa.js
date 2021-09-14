@@ -1,16 +1,17 @@
 ﻿//https://developers.google.com/maps/documentation/javascript/examples/layer-heatmap
 let map, heatmap;
+var array = [];
 
 function initMap() {
- 
+    getMarkers();
     map = new google.maps.Map(document.getElementById("map"), {
         zoom: 13,
-        //center: { lat: -23.2775, lng: -46.331 },
-        center: { lat: 37.775, lng: -122.434 },
+        center: { lat: -23.1155867, lng: -46.5532067},
+        //center: { lat: 37.775, lng: -122.434 },
         mapTypeId: "satellite",
     });
     heatmap = new google.maps.visualization.HeatmapLayer({
-        data: getPoints(),
+        data: array,
         map: map,
     });
     document
@@ -60,16 +61,29 @@ function changeOpacity() {
     heatmap.set("opacity", heatmap.get("opacity") ? null : 0.2);
 }
 
-function getLatLongApi() {
-    $.getJSON('/api/Lista', function (data) {
-        return [new google.maps.LatLng(data.lat, data.long,)];
+
+function getMarkers() {
+    $.ajax({
+        url: '/api/Lista',
+        type: 'GET',
+        data: null,
+        dataType: 'json',
+        success: mapData => {
+            console.log(mapData);
+            mapData.forEach(m => {
+                createMarker(m.lat, m.long);
+            });
+           // makeHeat();
+        }
     });
 }
 
-// Heatmap data: 500 Points
-function getPoints() {
-    var t = getLatLongApi();
-    return t;
-
-
+function createMarker(lat, lng) {
+    let latLng = { location: new google.maps.LatLng(lat, lng), weight: 11 };
+    array.push(latLng);
 }
+
+function makeHeat() {
+    new google.maps.visualization.HeatmapLayer({ map: map, data: array, maxIntensity: 5, opacity: 0.3, radius: 15 });
+}
+

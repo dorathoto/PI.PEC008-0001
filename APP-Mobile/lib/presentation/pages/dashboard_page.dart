@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import '../controller/dashboard_controller.dart';
+import 'institutional_page.dart';
 
 class DashboardPage extends StatefulWidget {
   static const String route = '/Dashboard';
@@ -47,9 +48,28 @@ class _DashboardPageState extends State<DashboardPage> {
         child: const Icon(Icons.add, size: 36, color: Color(0xff130d55)),
       ),
       body: Center(
-          child: Text('LAT/LNG Send',
+          child: Column(
+        children: [
+          const SizedBox(height: 100),
+          Text('LAT/LNG Send',
               style: GoogleFonts.ubuntu(
                   fontSize: 16,
                   color: Colors.white,
-                  fontWeight: FontWeight.bold))));
+                  fontWeight: FontWeight.bold)),
+          const SizedBox(height: 100),
+          Align(
+              alignment: Alignment.centerRight,
+              child: Padding(
+                  padding: const EdgeInsets.only(right: 20),
+                  child: GestureDetector(
+                      onTap: () => Navigator.of(context)
+                          .pushNamed(InstitutionalPage.route),
+                      child: Text('Quem somos',
+                          style: GoogleFonts.ubuntu(
+                              fontSize: 16,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.underline)))))
+        ],
+      )));
 }

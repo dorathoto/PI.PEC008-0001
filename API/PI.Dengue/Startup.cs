@@ -28,6 +28,7 @@ namespace PI.Dengue
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PI.Dengue", Version = "v1" });
             });
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,7 +47,7 @@ namespace PI.Dengue
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseCors(option => option.AllowAnyOrigin()); 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
