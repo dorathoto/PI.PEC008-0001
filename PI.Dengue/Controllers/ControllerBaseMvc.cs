@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PI.Dengue.Controllers
 {
-    public class ControllerBaseMvc : Microsoft.AspNetCore.Mvc.ControllerBase
+    public class ControllerBaseMvc : Microsoft.AspNetCore.Mvc.Controller
     {
         protected readonly ApplicationDbContext _context;
         public ControllerBaseMvc(ApplicationDbContext context)
