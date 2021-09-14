@@ -9,7 +9,7 @@ namespace PI.Dengue.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class WeatherForecastController :  ControllerBaseMvc
     {
         private static readonly string[] Summaries = new[]
         {
@@ -18,7 +18,7 @@ namespace PI.Dengue.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, ApplicationDbContext context) : base(context)
         {
             _logger = logger;
         }
@@ -26,6 +26,7 @@ namespace PI.Dengue.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            var t = _context.FocosDengue.ToList();
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  pi.dengue:
+    image: ${DOCKER_REGISTRY-}pidengue
+    build:
+      context: .
+      dockerfile: PI.Dengue/Dockerfile
+    #ports:
+    #  - "8090:80"
+  
+  
+  sqlserver.dengue:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - "ACCEPT_EULA=Y"
+      - "SA_PASSWORD=Pi.Dengue@test"
+      - "MSSQL_PID=Developer"
+      - "MSSQL_TCP_PORT=1433"
+      - "MSSQL_AGENT_ENABLED=true"
+      - "TZ=America/Sao_Paulo"
+    ports:
+      - "1433:1433"
+    volumes:
+      - C:\dados\volumes\sqlserver:/var/opt/mssql/data
