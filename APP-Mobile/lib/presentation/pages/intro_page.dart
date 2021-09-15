@@ -33,7 +33,7 @@ class _IntroPageState extends State<IntroPage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        backgroundColor: const Color(0xff130d55),
+        backgroundColor: Colors.amber.shade900,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

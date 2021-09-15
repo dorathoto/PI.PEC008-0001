@@ -34,7 +34,7 @@ class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: const Color(0xff130d55),
+      backgroundColor: Colors.amber.shade900,
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           var result = await _controller.sendLatLng();

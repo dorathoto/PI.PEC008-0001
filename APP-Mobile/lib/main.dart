@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
         title: 'COI POC',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
+            primarySwatch: Colors.amber,
+            backgroundColor: Colors.amber.shade900),
         home: IntroPage(),
         onGenerateRoute: PocRouter.generateRoute,
       );
