@@ -17,44 +17,42 @@
 ## Título do projeto
 Aplicativo Mobile para rastreamento de focos de dengue gerando mapa de calor para os orgãos públicos de saúde.
 
-#### Aplicativo Mobile para rastreamento de focos de dengue.
-
-#### Descrição do projeto:
+### Descrição do projeto:
 Identificar possíveis focos de Aedes de forma rápida, fácil enviando notificações aos proprietários de imóveis.
 
-#### Links
-##### API Swagger & Documentação
+### Links
+#### API Swagger & Documentação
 https://pidengue.azurewebsites.net/swagger
 
-##### Site
+#### Site
 https://pidengue.azurewebsites.net/
 
-##### APK Release v0.2.23
+#### APK Release v0.2.23
 (Precisa autenticar-se com conta Univesp)
 [Link Google Drive](https://drive.google.com/file/d/113eOF1KfeT01EF2BEYs1jj_28FXiiJrU/view?usp=sharing)
 
 ------------
- # Tecnologias utilizadas
-#### Infraestrutura
+# Tecnologias utilizadas
+### Infraestrutura
  - PaaS no Microsoft Azure, rodando container linux;
  - [MS SQL Server 2019 rodando em linux](https://docs.microsoft.com/pt-br/sql/linux/sql-server-linux-setup?view=sql-server-ver15 "MS SQL Server 2019 rodando em linux")
  
-#### Backend Backend
+### Backend Backend
  - ASP.Net MVC core 5
  - Docker & Docker compose
  - MS SQL 2019 rodando em linux by container
  
-####  APP Mobile Nativo
+###  APP Mobile Nativo
  - Flutter 2.1
  
-#### Website 
+### Website 
 - Html5
 - CSS 3
 - Javascript e plugins;
 - API Google Maps;
 
  
- #### Designer Partner
+ ### Designer Partner
  - MVC (app e api)
  - Clean code
  - Material Designer 
