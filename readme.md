@@ -15,11 +15,23 @@
 - WANDERSON JOSÉ REZENDE RA: 1714060
 
 ## Título do projeto
+Aplicativo Mobile para rastreamento de focos de dengue gerando mapa de calor para os orgãos públicos de saúde.
 
 #### Aplicativo Mobile para rastreamento de focos de dengue.
 
-Descrição do projeto:
+#### Descrição do projeto:
+Identificar possíveis focos de Aedes de forma rápida, fácil enviando notificações aos proprietários de imóveis.
 
+#### Links
+##### API Swagger & Documentação
+https://pidengue.azurewebsites.net/swagger
+
+##### Site
+https://pidengue.azurewebsites.net/
+
+##### APK Release v0.2.23
+(Precisa autenticar-se com conta Univesp)
+[Link Google Drive](https://drive.google.com/file/d/113eOF1KfeT01EF2BEYs1jj_28FXiiJrU/view?usp=sharing)
 
 ------------
  # Tecnologias utilizadas
