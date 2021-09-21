@@ -29,18 +29,18 @@ https://pidengue.azurewebsites.net/
 
 #### APK Release v0.2.23
 (Precisa autenticar-se com conta Univesp)
+
 [Link Google Drive](https://drive.google.com/file/d/113eOF1KfeT01EF2BEYs1jj_28FXiiJrU/view?usp=sharing)
 
 ------------
 # Tecnologias utilizadas
 ### Infraestrutura
- - PaaS no Microsoft Azure, rodando container linux;
- - [MS SQL Server 2019 rodando em linux](https://docs.microsoft.com/pt-br/sql/linux/sql-server-linux-setup?view=sql-server-ver15 "MS SQL Server 2019 rodando em linux")
+ - SaaS no Microsoft Azure
+ - MS SQL Server 2019
  
 ### Backend Backend
  - ASP.Net MVC core 5
- - Docker & Docker compose
- - MS SQL 2019 rodando em linux by container
+ - MS SQL 2019
  
 ###  APP Mobile Nativo
  - Flutter 2.1
