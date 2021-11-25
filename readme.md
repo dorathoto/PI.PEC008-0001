@@ -30,7 +30,7 @@ https://pidengue.azurewebsites.net/
 #### APK Release v0.2.23
 (Precisa autenticar-se com conta Univesp)
 
-[Link Google Drive](https://drive.google.com/file/d/113eOF1KfeT01EF2BEYs1jj_28FXiiJrU/view?usp=sharing)
+[Link Google Drive](https://drive.google.com/file/d/1QFm26hH_KTeKK84giN_6HuCQUul-mXMd/view?usp=sharing)
 
 ------------
 # Tecnologias utilizadas
